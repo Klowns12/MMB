@@ -18,7 +18,6 @@ img {
 }
 .content {
     display: flex;
-    align-items: flex-start;
     gap: 20px;
 }
 
@@ -26,19 +25,8 @@ img {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 200px; /* ความกว้างของคอลัมน์เมนู */
-    margin-right: 20%; /* เพิ่มระยะห่างทางขวาของเมนู */
+    width: 200px; /* กำหนดความกว้างของคอลัมน์เมนู */
 }
-
-.content {
-    display: flex;
-    gap: 30px; /* เพิ่มระยะห่างระหว่างคอลัมน์เมนูกับคอลัมน์ข้อความ */
-}
-
-.content .text {
-    padding-left: 20%; /* เพิ่มระยะห่างทางซ้ายของคอลัมน์ข้อความ */
-}
-
 
 .menu li {
     padding: 10px 0;
@@ -64,27 +52,46 @@ img {
 }
 
 .information {
-    flex: 2;
-    font-size: 10px;
-    line-height: 1.5;
-    color: #ffffff;
-    max-width: 600px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
 }
+
+.information h1 {
+    font-size: 24px;
+    text-align: center;
+    flex-basis: 100%; /* ให้ h1 ครอบคลุมเต็มแถว */
+    margin-bottom: 20px;
+}
+
+.information div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 25%; /* ให้กล่องแต่ละกล่องกว้าง 30% เพื่อให้ได้ 3 กล่องต่อแถว */
+    box-sizing: border-box; /* รวม padding กับ width เข้าด้วยกัน */
+    text-align: center;
+}
+
 .information img {
-    width: 590px;
-    height: auto;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
 }
 
+.information div h1 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Responsive design: สำหรับหน้าจอขนาดเล็ก */
 @media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .information {
-        margin-top: 20px;
+    .information div {
+        width: 100%; /* แสดงเป็นแถวเดียวเมื่อหน้าจอแคบ */
     }
 }
+
 
 .bar {
     display: flex;
