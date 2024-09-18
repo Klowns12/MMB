@@ -1,6 +1,6 @@
 document.querySelectorAll('.product-image').forEach(function(img) {
     const originalSrc = img.src;
-    const hoverSrc = img.getAttribute('data-hover');
+    const hoverSrc = img.getAttribute('image');
 
     img.addEventListener('mouseover', function() {
         img.src = hoverSrc;
