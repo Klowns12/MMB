@@ -51,6 +51,22 @@ img {
     padding-left: 10px; /* เพิ่มช่องว่างซ้ายมือ */
 }
 
+.product {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.product-image {
+    transition: all 0.3s ease;
+}
+
+.product-image:hover {
+    content: url('/src/image/electronic/20240918_103027.jpg'); /* ใช้ภาพที่ต้องการเปลี่ยน */
+}
+.product-image1:hover {
+    content: url('/src/image/electronic/20240918_103103.jpg');
+}
 .information {
     display: flex;
     flex-wrap: wrap;
