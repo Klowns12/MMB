@@ -1,0 +1,10 @@
+#product-details img {
+    width: 300px;  /* กำหนดความกว้างของภาพ */
+    height: auto;  /* ทำให้ความสูงปรับตามอัตราส่วนของภาพ */
+    max-width: 100%; /* ทำให้ภาพไม่เกินขอบเขตที่กำหนดไว้ */
+    border-radius: 10px;  /* มุมโค้งเล็กน้อย */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* เพิ่มเงาให้กับภาพ */
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    justify-content: center;
+    display: flex;
+}

@@ -10,3 +10,10 @@ document.querySelectorAll('.product-image').forEach(function(img) {
         img.src = originalSrc;
     });
 });
+
+fetch('floating-menu.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('floating-menu').innerHTML = data;
+});
+

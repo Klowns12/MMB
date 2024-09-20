@@ -18,6 +18,15 @@
         <li><a href="">วีธีสั่งซื้อ</a></li>
         <li><a href="">บทความ</a></li>
         <li><a href="">ติดต่อเรา</a></li>
+        <div>
+            <div class="search-container">
+                <i class="fa fa-search"></i>
+                <input type="text" id="partNumber" placeholder="Search..">
+            </div>
+    
+            <div id="searchResult"></div>
+            <div id="imageResult"></div> <!-- ที่จะแสดงภาพตาม part number -->
+        </div>
     </div>
     </div>
 
@@ -39,10 +48,10 @@
                 <h1>คอนโทลไฟหน้า</h1>
                 <p>รหัสสินค้า A2189009700</p>
                 <p>0.00</p>
-                <a href=""><button>รายละเอียด</button></a>
+                <a href="detail.html?product=control-light"><button>รายละเอียด</button></a>
             </div>
             <div>
-                <img class="product-image" src="/src/image/electronic/20240918_103058.jpg" image="src\image\electronic\20240918_103103.jpg" alt="">
+                <img class="product-image" src="/src/image/electronic/A2189009103.jpg" image="src\image\electronic\20240918_103103.jpg" alt="">
                 <h1>คอนโทลไฟหน้า</h1>
                 <p>รหัสสินค้า A2189009103</p>
                 <p>0.00</p>
@@ -98,28 +107,12 @@
             <br>
             <a href="">เงื่อนไขการใช้งาน</a>
         </div>
-        
-        <div class="floating-menu">
-            <div class="menu-icon">
-                <img src="/src/image/logo/Contact-icon.png" alt="Chat Icon">
-            </div>
-        
-            <div class="menu-items">
-                <a href="https://lin.ee/tHSWQF2" target="_blank" class="menu-item">
-                    <img src="/src/image/logo/icon-line.png" alt="LINE">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61565504897074" target="_blank" class="menu-item">
-                    <img src="/src/image/logo/facebook-icon.png" alt="Facebook">
-                </a>
-                <a href="tel:095-421-8060" class="menu-item">
-                    <img src="/src/image/logo/icon-tel.png" alt="Phone">
-                </a>
-            </div>
-        </div>
-        
+
+        <div id="floating-menu"></div>
 
         <div>© 2024 MC Benz Part. All rights reserved.</div>
     </footer>
 </body>
+<script src="data.js"></script>
 <script src="hover.js"></script>
 </html>

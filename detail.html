@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดสินค้า</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <div id="product-details">
+        <!-- เนื้อหาของสินค้าจะถูกเติมที่นี่ -->
+    </div>
+
+    <script class="detail">
+        // ฟังก์ชันในการดึงพารามิเตอร์จาก URL
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // สินค้าตัวอย่าง
+        const products = {
+            "control-light": {
+                title: "คอนโทลไฟหน้า",
+                code: "A2189009700",
+                price: "0.00",
+                description: "ชุดควบคุมไฟหน้าสำหรับรถยนต์.",
+                image: "/src/image/electronic/20240918_103020.jpg"
+            },
+            "brake-sensor": {
+                title: "คอนโทลไฟหน้า",
+                code: "A2189009103",
+                price: "0.00",
+                description: "เซ็นเซอร์เบรคสำหรับการตรวจจับการสึกหรอของผ้าเบรค.",
+                image: "/src/image/electronic/20240918_103058.jpg"
+            }
+
+        };
+
+        // ดึงค่าพารามิเตอร์จาก URL
+        const productKey = getQueryParam("product");
+
+        // ตรวจสอบว่ามีสินค้าตรงกับคีย์ที่ได้รับหรือไม่
+        if (products[productKey]) {
+            const product = products[productKey];
+
+            // แสดงรายละเอียดสินค้า
+            document.getElementById("product-details").innerHTML = `
+                <h1>${product.title}</h1>
+                <p>รหัสสินค้า: ${product.code}</p>
+                <p>ราคา: ${product.price}</p>
+                <p>${product.description}</p>
+                <img src="${product.image}" alt="${product.title}">
+            `;
+        } else {
+            document.getElementById("product-details").innerHTML = "<p>ไม่พบสินค้านี้</p>";
+        }
+    </script>
+</body>
+</html>
