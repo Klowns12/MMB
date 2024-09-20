@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MC Benz Part</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="engine.css">
 </head>
 <body>
     <div class="nav">
@@ -14,10 +14,18 @@
     <div>
         <img class="h" src="/src/image/logo/Untitled-2.1.png" alt="" style=" margin-top: 10px;" >
     <div class="bar">
-        <li><a href="">หน้าแรก</a></li>
+        <li><a href="/index.html">หน้าแรก</a></li>
         <li><a href="">วีธีสั่งซื้อ</a></li>
         <li><a href="">บทความ</a></li>
         <li><a href="">ติดต่อเรา</a></li>
+    </div>
+    <div>
+        <div class="search-container">
+            <input type="text" id="partNumber" placeholder="Search..">
+        </div>
+
+        <div id="searchResult"></div>
+        <div id="imageResult"></div> <!-- ที่จะแสดงภาพตาม part number -->
     </div>
     </div>
 
@@ -31,4 +39,79 @@
             <li><a href="/part.html">อะไหล่เครื่องยนต์</a></li>
             <li><a href="/electronic.html">อะไหล่ระบบอิเล็กทรอนิค</a></li>
         </ul>
+        
+        <div class="information">
+            <h1>อะไหล่ระบบอิเล็กทรอนิค</h1>
+            <div>
+                <img class="product-image"src="/src/image/electronic/A2189009700.jpg" image ="\src\image\electronic\20240918_103027.jpg" alt="">
+                <h1>คอนโทลไฟหน้า</h1>
+                <p>รหัสสินค้า A2189009700</p>
+                <p>0.00</p>
+                <a href="detail.html?product=control-light"><button>รายละเอียด</button></a>
+            </div>
+            <div>
+                <img class="product-image" src="/src/image/electronic/A2189009103.jpg" image="src\image\electronic\20240918_103103.jpg" alt="">
+                <h1>คอนโทลไฟหน้า</h1>
+                <p>รหัสสินค้า A2189009103</p>
+                <p>0.00</p>
+            </div>
+            <div>
+                <img class="product-image" src="/src/image/electronic/A205 900 50 10.jpg" image="src\image\electronic\20240918_103151.jpg" alt="">
+                <h1>คอนโทลไฟหน้า</h1>
+                <p>รหัสสินค้า A205 900 50 10</p>
+                <p>0.00</p>
+            </div>
+            <div>
+                <img class="product-image" src="/src/image/electronic/20240918_103220.jpg" image ="src\image\electronic\20240918_103230.jpg" alt="">
+                <h1>คอนโทลไฟหน้า</h1>
+                <p>รหัสสินค้า A222 870 07 89</p>
+                <p>0.00</p>
+            </div>
+            <div>
+                <img class="product-image" src="/src/image/electronic/20240918_103247.jpg" image="src\image\electronic\20240918_103253.jpg" alt="">
+                <h1>คอนโทลไฟหน้า</h1>
+                <p>รหัสสินค้า A222 900 48 12</p>
+                <p>0.00</p>
+            </div>
+            <div>
+                <img class="product-image" src="/src\image\electronic\20240918_103321.jpg" image="src\image\electronic\20240918_103327.jpg" alt="">
+                <h1>คอนโทลไฟหน้า</h1>
+                <p>รหัสสินค้า A1669002800</p>
+                <p>0.00</p>
+            </div>
+        </div>
     </div>
+    
+    <footer class="footer">
+        <div class="location">
+            <div>MC Auto Part | อะไหล่ดี คุณภาพเยี่ยม</div>
+            <div>Tel. 095-421-8060</div>
+            <div>เวลาทำการ:  จันทร์ - เสาร์: 09.30 - 19.00 </div>
+        </div>
+        <div class="service">
+            <div>บริการลูกค้า</div>
+            <ul>
+                <a href="">ติดต่อเรา</a>
+            </ul>
+        </div>
+        <div class="contact">
+            <div>ติดตามเรา</div>
+            <a href="https://www.facebook.com/profile.php?id=61565504897074">Facebook</a>
+            <br>
+            <a href="https://lin.ee/tHSWQF2">Line</a>
+        </div>
+        <div class="terms">
+            <div>เงื่อนไขและข้อกำหนด</div>
+            <a href="">นโยบายความเป็นส่วนตัว</a>
+            <br>
+            <a href="">เงื่อนไขการใช้งาน</a>
+        </div>
+
+        <div id="floating-menu"></div>
+
+        <div>© 2024 MC Benz Part. All rights reserved.</div>
+    </footer>
+</body>
+<script src="data.js"></script>
+<script src="hover.js"></script>
+</html>

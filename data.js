@@ -1,4 +1,4 @@
-const partNumbers = ["A2189009700", "A2189009103", "A205 900 50 10", "A222 870 07 89", "A222 900 48 12", "A1669002800"];
+const partNumbers = ["A2189009700", "A2189009103", "A2059005010", "A2228700789", "A2229004812", "A1669002800"];
 
         // ฟังก์ชันสำหรับการค้นหาเมื่อผู้ใช้กด Enter
         document.getElementById("partNumber").addEventListener("keydown", function(event) {
@@ -17,7 +17,7 @@ const partNumbers = ["A2189009700", "A2189009103", "A205 900 50 10", "A222 870 0
                     
                     // แสดงภาพตาม part number ที่ค้นเจอ
                     let imagesHtml = result.map(part => 
-                        `<img src="/src/image/electronic/${part}.jpg" alt="${part}" style="width: 200px; height: auto; margin: 10px;">`
+                        `<img src="/src/image/electronic/${part}.jpg" alt="${part}" style="width: 300px; height: auto; margin: 10px;">`
                     ).join("");
                     document.getElementById("imageResult").innerHTML = imagesHtml;
                 } else {

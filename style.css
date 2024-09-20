@@ -69,6 +69,7 @@ img {
     line-height: 1.5;
     color: #ffffff;
     max-width: 600px; 
+    margin-top: 20px;
 }
 .information img {
     width: 590px;
@@ -91,15 +92,55 @@ img {
     list-style: none;
     justify-content: center;
     align-items: center;
-    margin-left: 130px;
+    margin-left: 200px;
+    padding: 0;
 }
+
 .bar li {
     margin-right: 20px;
 }
+
 .bar a {
     text-decoration: none;
     color: #ffffff;
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .bar {
+        margin-left: 0;
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+    }
+    
+    .bar li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .bar a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Mobile view for very small screens */
+@media screen and (max-width: 480px) {
+    .bar {
+        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bar li {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .bar a {
+        font-size: 14px; /* Further adjust font size for smaller mobile devices */
+    }
+}
+
 .menu li {
     margin-top: 20px;
 }
@@ -156,23 +197,63 @@ img {
 }
 
 .search-container {
-    position: relative;
-    display: inline-block;
+    display: flex;
     justify-content: center;
+    margin-left: 190px;
+    margin-top: 10px;
+    position: relative;
 }
 
 .search-container input[type="text"] {
-    padding-left: 30px; /* ทำให้มีช่องว่างสำหรับไอคอน */
+    padding-left: 30px; /* Space for the icon */
     width: 200px;
     height: 30px;
-    border-radius:50px ;
+    border-radius: 50px;
 }
 
 .search-container .fa-search {
     position: absolute;
-    left: 10px;
+    left: 550px;
     top: 50%;
     transform: translateY(-50%);
     color: gray;
 }
+
+#searchResult, #imageResult {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 562px; /* Adjust size as needed */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .search-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .search-container input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #searchResult, #imageResult {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-container input[type="text"] {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    #searchResult, #imageResult {
+        width: 100%;
+    }
+}
+
 
